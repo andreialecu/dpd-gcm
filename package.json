@@ -1,0 +1,13 @@
+{
+	"name": "dpd-gcm",
+	"description": "GCM Push notifications for Deployd",
+	"version": "0.0.2",
+	"author": "Klaas van der Molen",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/kvdmolen/dpd-gcm.git"
+	},
+	"dependencies": {
+	"node-gcm" : "*"
+	}
+}
