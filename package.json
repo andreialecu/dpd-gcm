@@ -1,13 +1,30 @@
 {
-	"name": "dpd-gcm",
-	"description": "GCM Push notifications for Deployd",
-	"version": "0.0.2",
-	"author": "Klaas van der Molen",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/kvdmolen/dpd-gcm.git"
-	},
-	"dependencies": {
-	"node-gcm" : "*"
-	}
+  "name": "dpd-gcm",
+  "description": "GCM Push notifications for Deployd",
+  "version": "0.0.3",
+  "author": "Klaas van der Molen",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kvdmolen/dpd-gcm.git"
+  },
+  "dependencies": {
+    "node-gcm": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/kvdmolen/dpd-gcm/issues"
+  },
+  "homepage": "https://github.com/kvdmolen/dpd-gcm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gcm",
+    "dpd",
+    "google",
+    "push",
+    "deployd",
+    "notification"
+  ],
+  "license": "ISC"
 }
