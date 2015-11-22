@@ -22,9 +22,9 @@ dpdgcm.basicDashboard = {
             description : 'API Key'
         },
         {
-            name        : 'defaultMsg',
+            name        : 'defaultTitle',
             type        : 'string',
-            description : 'Default Message'
+            description : 'Default Title'
         }
     ]
 };
@@ -32,21 +32,26 @@ dpdgcm.basicDashboard = {
 dpdgcm.prototype.handle = function ( ctx, next ) {
 
     var devices;
-    var message;
+    var title, message;
 
     if(ctx.body && ctx.body.devices){
         devices = ctx.body.devices;
     }
 
     if(ctx.body && ctx.body.title){
-        message = ctx.body.title;
+        title = ctx.body.title;
     }else{
-        message = this.config.defaultMsg;
+        title = this.config.defaultTitle;
+    }
+
+    if(ctx.body && ctx.body.message){
+        message = ctx.body.message;
     }
 
     var msg = new gcm.Message();
 
     msg.delay_while_idle = false;
+    msg.addData("title",title);
     msg.addData("message",message);
 
     this.gcmsender.send(msg, devices, 5, function(err, result) {
