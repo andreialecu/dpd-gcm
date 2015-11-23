@@ -53,6 +53,13 @@ dpdgcm.prototype.handle = function ( ctx, next ) {
     msg.delay_while_idle = false;
     msg.addData("title",title);
     msg.addData("message",message);
+    msg.addData('sound', 'default');
+
+    if (ctx.body.payload) {
+      for (var key in ctx.body.payload) {
+        msg.addData(key, ctx.body.payload[key]);
+      }
+    }
 
     this.gcmsender.send(msg, devices, 5, function(err, result) {
         if(err){
