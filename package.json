@@ -8,6 +8,8 @@
     "url": "git://github.com/kvdmolen/dpd-gcm.git"
   },
   "dependencies": {
+    "async": "^2.0.1",
+    "lodash": "^4.15.0",
     "node-gcm": "*"
   },
   "bugs": {
